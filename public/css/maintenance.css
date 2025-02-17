@@ -1,0 +1,63 @@
+/* Định dạng body */
+body {
+    font-family: Arial, sans-serif;
+    background: url('/images/maintenance-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    height: 100vh; /* Đảm bảo full chiều cao màn hình */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden; /* Ẩn scroll nếu có */
+}
+
+/* Hộp thông báo */
+.container {
+    max-width: 500px; /* Giảm kích thước container */
+    width: 90%;
+    padding: 15px; /* Giảm padding để thu nhỏ */
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Tiêu đề */
+h2 {
+    color: #aba072;
+    font-size: 22px; /* Thu nhỏ tiêu đề */
+    margin-bottom: 8px;
+}
+
+/* Đoạn văn bản */
+p {
+    font-size: 16px; /* Giảm font chữ */
+    color: #ddd;
+    margin: 5px 0;
+}
+
+.maintenance-icon {
+    width: 50%; /* Chiếm 50% chiều rộng của container */
+    max-width: 200px; /* Giới hạn tối đa */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+/* Nút quay lại */
+.back-btn {
+    display: inline-block;
+    margin-top: 15px; /* Giảm khoảng cách */
+    padding: 8px 15px; /* Giảm padding */
+    background-color: #aba072;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px; /* Thu nhỏ chữ */
+}
+
+.back-btn:hover {
+    background-color: #e6b800;
+}
