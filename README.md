@@ -15,6 +15,7 @@ Bài tập này giúp bạn hiểu cách sử dụng **Events** và **Listeners*
 5.Kiểm tra kết quả bằng cách truy cập route thử nghiệm và xem file log.
 
 ## 🚀 Kết quả
-Hiển thị và trả về thông tin user sau mỗi lần đăng nhập
-Ghi thông tin sau khi user đăng ký ở phần log 
+Hiển thị và trả về thông tin user sau mỗi lần đăng nhập 
+link: http://127.0.0.1:8000/register-test
+Ghi thông tin sau khi user đăng ký ở phần log storage/logs/laravel.log
 ![Screenshot_7](https://github.com/user-attachments/assets/5c5d266a-29dd-433e-8ed3-b513311cee73)
