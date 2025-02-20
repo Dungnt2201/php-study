@@ -1,0 +1,25 @@
+/* CSS cho phần thông tin người dùng và nút logout */
+.user-info {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center; /* Căn chỉnh theo chiều dọc */
+    justify-content: flex-end; /* Đẩy các phần tử về bên phải */
+    margin-right: 20px; /* Tạo khoảng cách với lề phải */
+}
+
+.user-name {
+    margin-right: 20px; /* Tạo khoảng cách giữa tên người dùng và nút logout */
+    color: #333; /* Màu chữ cho tên người dùng */
+}
+
+.btn-link {
+    color: #007bff; /* Màu mặc định cho nút logout */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    padding: 10px 10px; /* Điều chỉnh padding cho nút logout */
+    border: none; /* Loại bỏ border */
+    background: none; /* Loại bỏ background */
+    cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
+}
+
+.btn-link:hover {
+    color:#1a3542; /* Màu khi hover vào nút logout */
+}
