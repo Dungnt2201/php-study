@@ -1,66 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛠 Build TODO App with Laravel and Authentication
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### 📌 Mô tả
+Đây là một ứng dụng TODO đơn giản được xây dựng bằng Laravel. Ứng dụng cho phép người dùng quản lý công việc với các chức năng CRUD (Tạo, Xem, Cập nhật, Xóa). Hệ thống xác thực được triển khai bằng Laravel Breeze.
 
-## About Laravel
+### ☘️Tính năng
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Xác thực người dùng (Đăng nhập & Đăng ký)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Thêm, chỉnh sửa, xóa công việc
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Hiển thị danh sách công việc trên Dashboard
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### ⚙️ Hướng dẫn cài đặt
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Yêu cầu hệ thống
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Đảm bảo bạn đã cài đặt:
 
-## Laravel Sponsors
+PHP 8.2+
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Composer
 
-### Premium Partners
+Node.js & NPM (để xử lý giao diện)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Laravel 10+
 
-## Contributing
+MySQL hoặc SQLite (để lưu trữ dữ liệu)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 🚀 Các bước triển khai
 
-## Code of Conduct
+#### Clone repository
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+        git clone https://github.com/your-username/laravel-todo.git
 
-## Security Vulnerabilities
+        cd laravel-todo
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### Cài đặt các thư viện cần thiết
 
-## License
+        composer install
+        npm install && npm run dev
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Tạo file môi trường
+
+        cp .env.example .env
+
+#### Cấu hình cơ sở dữ liệu
+
+Mở file .env và chỉnh sửa cấu hình database:
+
+DB_DATABASE=laravel_todo
+
+DB_USERNAME=root
+
+DB_PASSWORD=
+
+#### Chạy migrations:
+
+        php artisan migrate
+
+#### Cài đặt Laravel Breeze UI
+
+Cài đặt Laravel Breeze:
+
+        composer require laravel/breeze --dev
+
+Cài đặt giao diện với Blade:
+
+        php artisan breeze:install blade
+
+Chạy migrations nếu chưa chạy:
+
+        php artisan migrate
+
+Biên dịch assets giao diện:
+
+        npm install && npm run dev
+
+Tạo dữ liệu mẫu (Tùy chọn)
+
+        php artisan db:seed
+
+#### Chạy ứng dụng
+
+        php artisan serve
+
+Mở trình duyệt và truy cập http://127.0.0.1:8000.
+
+### ✅ Kết quả mong đợi
+
+1. Đăng ký/Đăng nhập để truy cập Dashboard.
+Link:http://127.0.0.1:8000/register
+![image](https://github.com/user-attachments/assets/2bd5e49a-24bd-4664-a237-67a5dfd2d89c)
+
+or
+Link:http://127.0.0.1:8000/login
+
+![image](https://github.com/user-attachments/assets/c206d051-d45d-418d-8369-98e9c5cb1820)
+
+2.Tạo công việc mới bằng cách nhập vào ô trên Dashboard.
+
+Link:http://127.0.0.1:8000/dashboard
+![image](https://github.com/user-attachments/assets/88755e0b-0e27-4e9b-ad15-e252739b1e70)
+
+![image](https://github.com/user-attachments/assets/5aa58c61-52ce-4d72-8f9c-dcb21cd4dab4)
+
+3. Chỉnh sửa/Xóa công việc bằng cách sử dụng các nút tương ứng.
+
+![image](https://github.com/user-attachments/assets/0f80ed83-6fe7-45a2-b37f-aad2df3056d4)
+
